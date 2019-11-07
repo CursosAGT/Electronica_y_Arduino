@@ -1,0 +1,2 @@
+Enviando Mensajes Entre módulos RF
+En este ejemplo un Arduino envía una mensaje  “Hola mundo” hacia otro Arduino receptor, para visualizar el mensaje recibido usaremos el monitor serial.

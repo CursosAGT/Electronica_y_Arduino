@@ -1,0 +1,5 @@
+ Enviando datos y variables con los módulos RF
+
+La librería principalmente trasmite cadenas de bytes, que pueden ser una cadena de texto o un dato convertido en cadena, pero cuando se necesitan enviar varios datos hay dos formas de hacerlo, un método es empaquetar todo en una sola trama y enviarlo, el receptor debe de desempaquetar y obtener los datos.
+
+Otra forma más sencilla es enviar un inicio de trama diferente para cada dato, el cual indicara al receptor que dato es el que se está enviando, el siguiente ejemplo lo hacemos de esta forma, enviaremos dos  datos, cada uno con un inicio de trama diferente.

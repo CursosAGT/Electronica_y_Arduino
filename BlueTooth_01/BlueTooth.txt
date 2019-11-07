@@ -1,0 +1,13 @@
+Los módulos HC-05 y HC-06 son módulos de Bluetooth que podemos usar para conectar comunicar con Arduino por Bluetooth.
+
+Mucha gente puede tener la impresión de que el Bluetooth es una tecnología anticuada, que se usaba para trasmitir datos entre dispositivos, y que actualmente está en desuso. Nada más lejos de la realidad.
+
+Bluetooth tiene la enorme ventaja de estar integrado de fábrica en la mayoría de dispositivos. Portátiles, Tablets, y Smartphones llevan integrado Bluetooth. Además, su uso es independiente del sistema operativo (Windows, Linux, Mac o Android).
+
+Esto convierte a la tecnología Bluetooth en uno de los mejores medios para comunicarnos de forma inalámbrica con Arduino. Por ejemplo, podemos emplearlo para controlar un robot desde el móvil o Tablet, o recibir mediciones en un ordenador para registrarlas en un servidor web.
+
+
+
+Incluso es posible programar Arduino de forma inalámbrica a través de Bluetooth, como veremos en una entrada posterior.
+
+Los dos módulos, HC-05 y HC-06, nos permiten conectar de forma sencilla un Arduino por Bluetooth. La diferencia entre ambos módulos es que el HC-06 sólo permite recibir comunicaciones (slave) mientras que el HC-05 puede recibirlas e iniciarlas (master and server). Por tanto el módulo HC-05 es superior en características técnicas.

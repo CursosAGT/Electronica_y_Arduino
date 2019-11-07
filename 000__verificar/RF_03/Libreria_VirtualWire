@@ -1,0 +1,28 @@
+Comunicación inalámbrica RF entre Arduinos usando librerías
+http://www.airspayce.com/mikem/arduino/VirtualWire/index.html
+Una de las librería más comunes y eficientes es la VirtualWire desarrollado por Mike McCauley, con esta librería vamos a trabajar los proximos ejemplos del tutorial
+
+Necesitamos descargar la librera VirtualWire e importarla a nuestro IDE Arduino.
+
+A continuación explicamos  las funciones principales  de la librería:
+void vw_setup(uint16_t speed)
+
+Inicializar el software VirtualWire, como parámetro hay que indicarle la velocidad de operación, que representa los bits por segundo para la transmisión RF
+void vw_set_tx_pin(uint8_t pin)
+
+Estable el pin IO digital por donde se va a transmitir los datos
+void vw_set_rx_pin(uint8_t pin)
+
+Estable el pin digital IO por donde se va a recibir datos.               
+void vw_rx_start()
+
+Empieza a escuchar los datos provenientes por el pin_rx, es necesario llamar a esta función para poder recibir los datos
+uint8_t vw_send(uint8_t * buf,uint8_t len )
+
+Enviar un mensaje con la longitud dada. La función termina rápido pero mensaje será enviado en el momento adecuado establecido por las interrupciones.  Dónde: buf , es el puntero al vector para trasmitir. Y len es el número de bytes a transmitir
+void vw_wait_tx()
+
+Hace una pausa hasta que se trasmitan todos los datos.
+uint8_t vw_get_message(uint8_t * buf, uint8_t * len )             
+
+Si un mensaje está disponible (con buena suma de comprobación o no), almacena el mensaje en buf , devuelve true si la comprobación es correcta. buf es puntero a la ubicación para guardar los datos de lectura y leng es un puntero a la cantidad de bytes disponibles de buf.

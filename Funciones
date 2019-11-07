@@ -1,0 +1,266 @@
+
+Digital I/O
+	digitalRead()
+		Descripcion: Lectura DIGITAL de puertos
+		Valores de entrada esperados: HIGH or LOW.
+		Syntaxis: digitalRead(pin) 
+		Puertos: Digitales 0,1,2,3,..,13 (para Arduino UNO)
+	digitalWrite()
+		Descripcion: Escritura DIGITAL de puertos
+		Valores de salida: HIGH o LOW (5V en Arduino Uno (3.3V otros) como HIGH o 0V (GND) como LOW).
+		Syntaxis: digitalWrite(pin, valor)
+		Puertos: Digitales 0,1,2,3,..,13 (para Arduino UNO)
+		
+	pinMode()
+		Descripcion: Configura el pin especificado como entrada o salida (INPUT / OUTPUT)
+		Modos: INPUT, OUTPUT, o INPUT_PULLUP
+		Syntaxis: digitalWrite(pin, modo) 
+		Puertos: Digitales 0,1,2,3,..,13 (para Arduino UNO)
+				 Analogicos A0,A1,A2, A3, A4, A5 (para Arduino UNO)
+			MODO: INPUT_PULLUP. Additionalmente el modo INPUT desabilita las resistencias pullups internas.
+			Descripcion: Se puede aceser a la configuracion de la resistencia pullup interna de la placa Arduino para habilitarla the internal 
+			Syntaxis: pinMode(pin, INPUT_PULLUP).
+		El uso de pinMode no es obligatorio en analogWrite() y analogRead()
+Analog I/O
+	analogRead()
+		Descripcion: Lectura ANALOGICA de puertos
+		Valores de entrada esperados: mediante Conversor Analogico Digital o ADC de 10-bit - 0 a 1024 
+			 de 0V (0-GND) a de 5V (1023) en Arduino Uno (3.3V otras placas).
+		Syntaxis: analogRead(pin)
+		Puertos: A0,A1,A2, A3, A4, A5 (para Arduino UNO)
+	analogWrite()
+		Descripcion: Escritura ANALOGICA de puertos
+		Valores de salida: Mediante PWM escribe valores 0(LOW) o 5v(HIGH) en variando el tiempo de cada estado, sumilando una escala de valores entre 0 y 5volt.
+		Se generan ondas cuadradas con ciclos donde el valor es la diferencia entre el tiempo en estado alto y el estado Bajo
+		La frequencia de la señal del es aproximadamente de 490 Hz. (Los pins 5 and 6 para Arduino UNO llegan a aproximadamente 980 Hz.).
+		Syntaxis: analogWrite(pin, valor)
+		valores: Entre 255 (como HIGH) y 0 (como LOW) . HIGH (5V en Arduino Uno (3.3V otros) como HIGH y 0V (GND) como LOW).
+		Usar variables tipo: int 
+		Puertos: Digitales con PWM  3,5,6,9,10,11 (para Arduino UNO - ATmega168 o ATmega328P)
+				 Digitales con PWM  2 - 13 y 44 - 46  (para Arduino Mega)
+				 Digitales con PWM  2 - 13 (para Arduino DUE)
+				 Digitales con PWM  9, 10, 11 (para Arduino mas viejos - ATmega8)
+	analogReference()
+		Descripcion: Configura el valor de referencia para convertirlos a digitales
+		Jamas use valores inferiores a 0V o mayores a 5V para referenciar voltages externos 
+		Syntaxis: analogReference(tipo)
+			Arduino AVR Boards (Uno, Mega, etc.)
+				DEFAULT: the default analog reference of 5 volts (on 5V Arduino boards) or 3.3 volts (on 3.3V Arduino boards)
+				INTERNAL: an built-in reference, equal to 1.1 volts on the ATmega168 or ATmega328P and 2.56 volts on the ATmega8 (not available on the Arduino Mega)
+				INTERNAL1V1: a built-in 1.1V reference (Arduino Mega only)
+				INTERNAL2V56: a built-in 2.56V reference (Arduino Mega only)
+				EXTERNAL: the voltage applied to the AREF pin (0 to 5V only) is used as the reference.
+			Arduino SAMD Boards (Zero, etc.)
+				AR_DEFAULT: the default analog reference of 3.3V
+				AR_INTERNAL: a built-in 2.23V reference
+				AR_INTERNAL1V0: a built-in 1.0V reference
+				AR_INTERNAL1V65: a built-in 1.65V reference
+				AR_INTERNAL2V23: a built-in 2.23V reference
+				AR_EXTERNAL: the voltage applied to the AREF pin is used as the reference
+			Arduino SAM Boards (Due)
+				AR_DEFAULT: the default analog reference of 3.3V. This is the only supported option for the Due.
+
+	Time
+	(1 segundo = 1000 milisegundos o 1000000 microsegundos)
+		delay()
+			Description: Pausa en el bucle de trabajo (en Milisegundos)
+			Syntaxis : delay(1000) = 1 segundo
+			Usar variables tipo: long
+		delayMicroseconds()
+			Description: Pausa en el bucle de trabajo (en Microsegundos)
+			Syntaxis : delayMicroseconds(1000) = 1 Milisegundos  0.001 segundo
+			Valor maximo 16383.
+			Usar variables tipo: long
+	delayMicroseconds()
+		micros()
+			Description: Regresa el tiempo de trabajo cargado de la placa en en Microsegundos.
+				Reinicia aprox a los 70 minutos volviendo a 0 cero
+			Syntaxis : time = micros()
+			Usar variables tipo: unsigned long  para la variable de recoleccion "time"
+		millis()
+			Description: Regresa el tiempo de trabajo cargado de la placa en en Milisegundos.
+				Reinicia aprox a los 50 dias volviendo a 0 cero
+			Syntaxis : time = millis()
+			Usar variables tipo: unsigned long  para la variable de recoleccion "time"
+
+	Communication
+		Serial
+		Stream
+
+	Random Numbers
+		random()
+		randomSeed()
+
+	Math
+		abs()
+		constrain()
+		map()
+		max()
+		min()
+		pow()
+		sq()
+		sqrt()
+	Trigonometry
+		cos()
+		sin()
+		tan()
+	Characters
+		isAlpha()
+		isAlphaNumeric()
+		isAscii()
+		isControl()
+		isDigit()
+		isGraph()
+		isHexadecimalDigit()
+		isLowerCase()
+		isPrintable()
+		isPunct()
+		isSpace()
+		isUpperCase()
+		isWhitespace()
+
+	Bits and Bytes
+		bit()
+		bitClear()
+		bitRead()
+		bitSet()
+		bitWrite()
+		highByte()
+		lowByte()
+	External Interrupts
+		attachInterrupt()
+		detachInterrupt()
+	Interrupts
+		interrupts()
+		noInterrupts()
+
+	USB
+		Keyboard
+		Mouse 
+
+
+	Zero, Due & MKR Family
+		analogReadResolution()
+		analogWriteResolution()
+	Advanced I/O
+		noTone()
+		pulseIn()
+		pulseInLong()
+		shiftIn()
+		shiftOut()
+		tone()https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/
+
+
+
+
+
+
+
+variables
+
+Arduino data types and constants.
+Constants
+Floating Point Constants
+Integer Constants
+HIGH | LOW
+INPUT | OUTPUT | INPUT_PULLUP
+LED_BUILTIN
+true | false
+
+Conversion
+	byte()
+	char()
+	float()
+	int()
+	long()
+	word()
+Data Types
+String()
+array
+bool
+boolean
+byte
+char
+double
+float
+int
+long
+short
+size_t
+string
+unsigned char
+unsigned int
+unsigned long
+void
+word
+Variable Scope & Qualifiers
+const
+scope
+static
+volatile
+Utilities
+PROGMEM
+sizeof()
+structure
+
+The elements of Arduino (C++) code.
+Sketch
+loop()
+setup()
+Control Structure
+break
+continue
+do...while
+else
+for
+goto
+if
+return
+switch...case
+while
+Further Syntax
+#define (define)
+#include (include)
+/* */ (block comment)
+// (single line comment)
+; (semicolon)
+{} (curly braces)
+Arithmetic Operators
+% (remainder)
+* (multiplication)
++ (addition)
+- (subtraction)
+/ (division)
+= (assignment operator)
+Comparison Operators
+!= (not equal to)
+< (less than)
+<= (less than or equal to)
+== (equal to)
+> (greater than)
+>= (greater than or equal to)
+Boolean Operators
+! (logical not)
+&& (logical and)
+|| (logical or)
+Pointer Access Operators
+& (reference operator)
+* (dereference operator)
+Bitwise Operators
+& (bitwise and)
+<< (bitshift left)
+>> (bitshift right)
+^ (bitwise xor)
+| (bitwise or)
+~ (bitwise not)
+Compound Operators
+%= (compound remainder)
+&= (compound bitwise and)
+*= (compound multiplication)
+++ (increment)
++= (compound addition)
+-- (decrement)
+-= (compound subtraction)
+/= (compound division)
+^= (compound bitwise xor)
+|= (compound bitwise or) 

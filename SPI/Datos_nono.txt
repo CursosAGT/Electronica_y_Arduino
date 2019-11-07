@@ -1,0 +1,12 @@
+https://store.arduino.cc/usa/arduino-nano
+
+ 
+Nombre	Alias	Pin (en Arduino Uno o Nano)	Descripcion
+VCC			 					+3.3 … 5 Volt
+GND		Ground													Ground
+SCLK	CLK/SCK/SCLK	D13	 (hardware)							Clock (SPI)
+MISO	MISO/SDO/DOUT	D12	 (hardware)							Master In Slave Out (SPI)
+MOSI	MOSI/SDI/DIN	D11	 (hardware)							Master Out Slave In (SPI)
+SS		S/CS/SDA/		D10	 (hardware, solo en esclavo)		Slave/Chip Select (SPI)
+RES		RST/RES/REST	D9	 (variable, se fija por software)	Controller Reset
+RS		RS/DC			D8	 (variable, se fija por software)	Mode: Command/Data
