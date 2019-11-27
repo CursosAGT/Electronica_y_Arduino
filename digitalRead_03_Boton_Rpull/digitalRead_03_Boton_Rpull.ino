@@ -26,7 +26,7 @@
                                        *  * |             [ ] [ ] [ ]             | *  *               | |
                                        *  * |  UNO_R3     GND MOSI 5V ____________/ *  *               | |
                                        *  * \________________________/              *  *               | |
-                                                                                                       | |
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *               | |
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *               | |
                                                              BOTON           /------------------------/  | pin 2
                                        *  0----0  *  *  *  0--[X]--0  *  *  0  0-ww-0  *                 |         Pull UP
@@ -36,21 +36,22 @@
                                        0-------0  *  *  *  0--[X]--0  *  *  0  0--www--0                 |         Pull Down
                                                                                10kOhm                    |
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
-                                                                                                         |
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
-                                                                                                         |
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *                 |
                                           220 Ohm            Led 1              /-----------------------/  pin 13
                                        *  0-ww-0  *  *  *  0--|>|--0  *  *  *  0    *  *
-
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *
-
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *
-
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *
+                                       *  *    *  *  *  *  *       *  *  *  *  *    *  *
                                        *  0    *  *  *  *  *       *  *  *  *  *    *  0
                          pin GND---------/ \------------------------------------------/ - GND
                                        *  *    *  *  *  *  *       *  *  *  *  *    *  *
-
                                        0  *    *  *  *  *  *       *  *  *  *  *    0  *
                          pin 5v-------/ \------------------------------------------/+ 5v
 
@@ -63,7 +64,7 @@
            |GND           |Input Pin       | 5V
 
 Resistencia pull down
-En la configuración pull down, cuando el circuito está en reposo, una pequeña tencion pasa por la resistencia de 10K manteniendo el puerto prácticamente en 0V estado LOW.
+En la configuración pull down, cuando el circuito está en reposo, una pequeña tension pasa por la resistencia de 10K manteniendo el puerto prácticamente en 0V estado LOW.
 Si pulsamos pel boton, dejaremos pasar corriente y tendremos una diferencia de potencial de 5V poniendo el puerto en HIGH.
 
 
